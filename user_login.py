@@ -4,7 +4,6 @@
 @Title : User_login
 
 '''
-
 import re
     
 def firstname(self):
@@ -13,12 +12,12 @@ def firstname(self):
         Parameter: self
         Return: firstname
     """
-
-    firstname= input("enter the Firstname: ")
+    firstname= 'Srividya'
     pattern="^[A-Z]{1}|[a-z][.]+\s[A-Z][a-z]+$"
     result=re.match(pattern,firstname)
     if result:
-        return firstname
+        if type(firstname) in [str] :
+            return firstname
     else:
         raise TypeError("name must be in string format")
 
@@ -28,7 +27,7 @@ def lastname(self):
         Parameter: self
         Return: lastname
     """
-    lastname= input("enter the Lastname: ")
+    lastname= 'Vangapelli'
     pattern="^[A-Z]{1}|[a-z][.]+\s[A-Z][a-z]+$"
     result=re.match(pattern,lastname)
     if result:
@@ -42,7 +41,7 @@ def email(self):
         Parameter: self
         Return: emai
     """
-    email= input("enter the E-mail: ")
+    email= 'vangapellisreevidya@gmail.com'
     pattern="^[a-zA-Z0-9]+([.#_$+-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2})?$"
     result=re.match(pattern,email)
     if result:
@@ -56,8 +55,8 @@ def phonenumber(self):
         Parameter: self
         Return: emai
     """
-    phonenumber= input("enter the PhoneNumber: ")
-    pattern="((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))"
+    phonenumber=  '7036653770'
+    pattern="^[789]\d{9}$"
     result=re.match(pattern,phonenumber)
     if result:
         return phonenumber
@@ -70,7 +69,7 @@ def password(self):
         Parameter: self
         Return: password
     """
-    password= input("enter the Password: ")
+    password= 'Sri@123'
     #pattern= "^[A-Z]+[a-zA-Z](\s)*$"
     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{6,8}$"
     result=re.match(pattern,password)
@@ -80,9 +79,9 @@ def password(self):
         raise ValueError("password must be in given format includes A,a,0-9,and special characters ")
     
 
-# if __name__=='__main__':
-    # firstname(self="")
-    # lastname(self="")
-    # email(self="")
-    # password(self="")
-    # phonenumber(self="")
+if __name__=='__main__':
+    firstname(self="")
+    lastname(self="")
+    email(self="")
+    password(self="")
+    phonenumber(self="")
